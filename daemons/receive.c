@@ -158,7 +158,7 @@ int clear_rec_buffer(void)
 	return (1);
 }
 
-inline void unget_rec_buffer(int count)
+void unget_rec_buffer(int count)
 {
 	LOGPRINTF(5, "unget: %d", count);
 	if (count == 1 || count == 2) {
@@ -192,7 +192,7 @@ inline lirc_t get_next_pulse(lirc_t maxusec)
 	return (data & (PULSE_MASK));
 }
 
-inline lirc_t get_next_space(lirc_t maxusec)
+lirc_t get_next_space(lirc_t maxusec)
 {
 	lirc_t data;
 

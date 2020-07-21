@@ -78,7 +78,7 @@ inline void send_pulse(lirc_t data)
 	}
 }
 
-inline void send_space(lirc_t data)
+void send_space(lirc_t data)
 {
 	if (send_buffer.wptr == 0 && send_buffer.pendingp == 0) {
 		LOGPRINTF(1, "first signal is a space!");
